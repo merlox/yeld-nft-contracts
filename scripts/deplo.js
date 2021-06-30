@@ -25,11 +25,12 @@ async function main() {
 	const TestToken = await ethers.getContractFactory('TestToken')
 	const testToken = await upgrades.deployProxy(TestToken, [])
 	await testToken.deployed()
+	await testToken.transfer('0x7c5bAe6BC84AE74954Fd5672feb6fB31d2182EC6', '100000000000000000000')
 	console.log('TestToken:', testToken.address)
 
 	console.log('Deploying NFTManager...')
 	const NFTManager = await ethers.getContractFactory('NFTManager')
-	const manager = await upgrades.deployProxy(NFTManager, [testToken.address, accs[0], testToken.address, 'https://yeld.dev/imgs/'])
+	const manager = await upgrades.deployProxy(NFTManager, [testToken.address, accs[0], testToken.address, 'https://yeld.dev/'])
 	await manager.deployed()
 	console.log('NFTManager:', manager.address)
 
@@ -41,6 +42,9 @@ async function main() {
 
 	console.log('Doing setDistributeNFTRewards...')
 	await manager.setDistributeNFTRewards(rewards.address)
+
+	console.log('Doing setTOKEN to allow add fee and update price...')
+	await rewards.setTOKEN(manager.address)
 
 	console.log('Creating blueprints 1...')
 	const amountOne = eBigNumber.from(1000)
