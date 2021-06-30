@@ -1,0 +1,4 @@
+to deploy the NFT manager make sure to deploy both NFTManager and DistributeNFTRewards
+the first one makes NFT sales
+the second one distributes YELD rewards to users
+make sure to run setLiquidityProviderToken with the NFTManager after deploying the NFTManager
