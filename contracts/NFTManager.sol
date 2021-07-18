@@ -29,6 +29,9 @@ contract NFTManager is Initializable, OwnableUpgradeSafe, ERC721UpgradeSafe {
     mapping (string => bool) public blueprintExists;
     // Token ID -> tokenURI without baseURI
     mapping (uint256 => string) public myTokenURI;
+    mapping (address => uint256) public myTokensCombinedCost;
+    mapping (address => uint256[]) public myTokens;
+    uint256 public totalLockedTokens; // Total YELD tokens locked
     string[] public tokenURIs;
     uint256[] public mintedTokenIds;
     uint256 public lastId;
@@ -128,6 +131,9 @@ contract NFTManager is Initializable, OwnableUpgradeSafe, ERC721UpgradeSafe {
         lastId = lastId.add(1);
         mintedTokenIds.push(lastId);
         myTokenURI[lastId] = _tokenURI;
+        myTokensCombinedCost[msg.sender] = myTokensCombinedCost[msg.sender].add(blueprints[_tokenURI][2]);
+        myTokens[msg.sender].push(lastId);
+        totalLockedTokens = totalLockedTokens.add(cost.div(2)); // 5o%
         // The token URI determines which NFT this is
         _safeMint(msg.sender, lastId, "");
         _setTokenURI(lastId, _tokenURI);
@@ -148,5 +154,9 @@ contract NFTManager is Initializable, OwnableUpgradeSafe, ERC721UpgradeSafe {
 
     function getBlueprint(string memory _tokenURI) public view returns(uint256[4] memory) {
         return blueprints[_tokenURI];
+    }
+
+    function getAllMyTokens(address _user) public view returns(uint256[] memory) {
+        return myTokens[_user];
     }
 }
