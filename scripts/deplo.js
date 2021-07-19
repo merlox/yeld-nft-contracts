@@ -26,6 +26,7 @@ async function main() {
 	const testToken = await upgrades.deployProxy(TestToken, [])
 	await testToken.deployed()
 	await testToken.transfer('0x7c5bAe6BC84AE74954Fd5672feb6fB31d2182EC6', '100000000000000000000')
+	await testToken.transfer('0x11e499948F084e331cD492cEAdcbd75d6b414Ce9', '100000000000000000000')
 	console.log('TestToken:', testToken.address)
 
 	console.log('Deploying NFTManager...')
@@ -36,15 +37,12 @@ async function main() {
 
 	console.log('Deploying DistributeNFTRewards...')
 	const DistributeNFTRewards = await ethers.getContractFactory('DistributeNFTRewards')
-	const rewards = await upgrades.deployProxy(DistributeNFTRewards, [testToken.address, testToken.address])
+	const rewards = await upgrades.deployProxy(DistributeNFTRewards, [testToken.address, testToken.address, manager.address])
 	await rewards.deployed()
 	console.log('DistributeNFTRewards:', rewards.address)
 
 	console.log('Doing setDistributeNFTRewards...')
 	await manager.setDistributeNFTRewards(rewards.address)
-
-	console.log('Doing setTOKEN to allow add fee and update price...')
-	await rewards.setTOKEN(manager.address)
 
 	console.log('Creating blueprints 1...')
 	const amountOne = eBigNumber.from(1000)

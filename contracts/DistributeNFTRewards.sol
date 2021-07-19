@@ -20,8 +20,8 @@ contract DistributeNFTRewards is Initializable, OwnableUpgradeSafe {
     mapping (address => uint256) public lockingTime;
     // The uniswap LP token contract
     address public liquidityProviderToken;
-    // The TOKEN token
-    address public token;
+    // The TOKEN rewardToken
+    address public rewardToken;
     // How many LP tokens are locked
     uint256 public totalLiquidityLocked;
     // The total TOKENFee generated
@@ -29,16 +29,29 @@ contract DistributeNFTRewards is Initializable, OwnableUpgradeSafe {
     uint256 public tokenFeePrice;
     uint256 public accomulatedRewards;
     uint256 public pricePadding;
+    address public manager;
+
+    modifier onlyManager {
+        require(msg.sender == manager);
+        _;
+    }
     
-    function initialize(address _liquidityProviderToken, address _token) public initializer {
+    /// @param _liquidityProviderToken The token that gets locked here
+    /// @param _rewardToken The token that gets rewarded every time new liquidity is added
+    function initialize(address _liquidityProviderToken, address _rewardToken, address _manager) public initializer {
         __Ownable_init();
         liquidityProviderToken = _liquidityProviderToken;
-        token = _token;
+        rewardToken = _rewardToken;
+        manager = _manager;
         pricePadding = 1e18;
     }
 
-    function setTOKEN(address _token) public onlyOwner {
-        token = _token;
+    function setRewardToken(address _rewardToken) public onlyOwner {
+        rewardToken = _rewardToken;
+    }
+
+    function setManager(address _manager) public onlyOwner {
+        manager = _manager;
     }
 
     function setLiquidityProviderToken(address _liquidityProviderToken) public onlyOwner {
@@ -49,8 +62,7 @@ contract DistributeNFTRewards is Initializable, OwnableUpgradeSafe {
     /// Price is = (feeIn / totalTOKENFeeDistributed) + currentPrice
     /// padded with 18 zeroes that get removed after the calculations
     /// if there are no locked LPs, the price is 0
-    function addFeeAndUpdatePrice(uint256 _feeIn) public {
-        require(msg.sender == token, 'LockLiquidity: Only the TOKEN contract can execute this function');
+    function addFeeAndUpdatePrice(uint256 _feeIn) public onlyManager {
         accomulatedRewards = accomulatedRewards.add(_feeIn);
         if (totalLiquidityLocked == 0) {
             tokenFeePrice = 0;
@@ -59,28 +71,26 @@ contract DistributeNFTRewards is Initializable, OwnableUpgradeSafe {
         }
     }
 
-    function lockLiquidity(uint256 _amount) public {
+    // Liquidity is locked FOREVER
+    function lockLiquidity(address _to, uint256 _amount) public onlyManager {
         require(_amount > 0, 'LockLiquidity: Amount must be larger than zero');
         // Transfer UNI-LP-V2 tokens inside here forever while earning fees from every transfer, LP tokens can't be extracted
-        uint256 approval = IERC20(liquidityProviderToken).allowance(msg.sender, address(this));
-        require(approval >= _amount, 'LockLiquidity: You must approve the desired amount of liquidity tokens to this contract first');
-        IERC20(liquidityProviderToken).transferFrom(msg.sender, address(this), _amount);
         totalLiquidityLocked = totalLiquidityLocked.add(_amount);
         // Extract earnings in case the user is not a new Locked LP
-        if (lastPriceEarningsExtracted[msg.sender] != 0 && lastPriceEarningsExtracted[msg.sender] != tokenFeePrice) {
+        if (lastPriceEarningsExtracted[_to] != 0 && lastPriceEarningsExtracted[_to] != tokenFeePrice) {
             extractEarnings();
         }
         // Set the initial price 
         if (tokenFeePrice == 0) {
             tokenFeePrice = (accomulatedRewards.mul(pricePadding).div(_amount)).add(1e18);
-            lastPriceEarningsExtracted[msg.sender] = 1e18;
+            lastPriceEarningsExtracted[_to] = 1e18;
         } else {
-            lastPriceEarningsExtracted[msg.sender] = tokenFeePrice;
+            lastPriceEarningsExtracted[_to] = tokenFeePrice;
         }
         // The price doesn't change when locking liquidity. It changes when fees are generated from transfers
-        amountLocked[msg.sender] = amountLocked[msg.sender].add(_amount);
+        amountLocked[_to] = amountLocked[_to].add(_amount);
         // Notice that the locking time is reset when new liquidity is added
-        lockingTime[msg.sender] = now;
+        lockingTime[_to] = now;
     }
 
     // We check for new earnings by seeing if the price the user last extracted his earnings
@@ -91,7 +101,7 @@ contract DistributeNFTRewards is Initializable, OwnableUpgradeSafe {
         uint256 earnings = getEarnings();
         lastPriceEarningsExtracted[msg.sender] = tokenFeePrice;
         accomulatedRewards = accomulatedRewards.sub(earnings);
-        IERC20(token).transfer(msg.sender, earnings);
+        IERC20(rewardToken).transfer(msg.sender, earnings);
     }
 
     function getEarnings() public view returns(uint256) {

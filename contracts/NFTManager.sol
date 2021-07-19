@@ -12,6 +12,7 @@ abstract contract IFreeFromUpTo is IERC20 {
 
 interface IDistributeNFTRewards {
     function addFeeAndUpdatePrice(uint256 _feeIn) external;
+    function lockLiquidity(address _to, uint256 _amount) external;
 }
 
 contract NFTManager is Initializable, OwnableUpgradeSafe, ERC721UpgradeSafe {
@@ -126,6 +127,9 @@ contract NFTManager is Initializable, OwnableUpgradeSafe, ERC721UpgradeSafe {
         IERC20(yeld).transferFrom(msg.sender, devTreasury, dev);
         IERC20(yeld).transferFrom(msg.sender, distributeNFTRewards, distributionToOthers);
         IDistributeNFTRewards(distributeNFTRewards).addFeeAndUpdatePrice(distributionToOthers);
+        // Lock liquidity amounts
+        IERC20(yeld).transferFrom(msg.sender, distributeNFTRewards, cost.div(2));
+        IDistributeNFTRewards(distributeNFTRewards).lockLiquidity(msg.sender, cost.div(2));
 
         blueprints[_tokenURI][1] = blueprints[_tokenURI][1].add(1);
         lastId = lastId.add(1);
