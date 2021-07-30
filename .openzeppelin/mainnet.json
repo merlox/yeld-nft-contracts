@@ -1,0 +1,533 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0xa6D2AbD2C175d172A2B32efd6c9e3E8fdB73Ec3c",
+    "txHash": "0x04f3d11c20472138c10a4e748fe3f713cf9854ba83b4a341b9f83b8f057fe6fb",
+    "deployTransaction": {
+      "hash": "0x04f3d11c20472138c10a4e748fe3f713cf9854ba83b4a341b9f83b8f057fe6fb",
+      "type": 0,
+      "accessList": null,
+      "blockHash": null,
+      "blockNumber": null,
+      "transactionIndex": null,
+      "confirmations": 0,
+      "from": "0x206231Ec6580dAc4c3F93E44C17A7eC5323968A6",
+      "gasPrice": {
+        "type": "BigNumber",
+        "hex": "0x1176592e00"
+      },
+      "gasLimit": {
+        "type": "BigNumber",
+        "hex": "0x0762b4"
+      },
+      "to": null,
+      "value": {
+        "type": "BigNumber",
+        "hex": "0x00"
+      },
+      "nonce": 1,
+      "data": "0x608060405234801561001057600080fd5b50600080546001600160a01b031916339081178255604051909182917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a350610759806100616000396000f3fe60806040526004361061007b5760003560e01c80639623609d1161004e5780639623609d1461011157806399a88ec414610124578063f2fde38b14610144578063f3b7dead146101645761007b565b8063204e1c7a14610080578063715018a6146100bc5780637eff275e146100d35780638da5cb5b146100f3575b600080fd5b34801561008c57600080fd5b506100a061009b366004610515565b610184565b6040516001600160a01b03909116815260200160405180910390f35b3480156100c857600080fd5b506100d1610215565b005b3480156100df57600080fd5b506100d16100ee366004610554565b610292565b3480156100ff57600080fd5b506000546001600160a01b03166100a0565b6100d161011f36600461058c565b61031c565b34801561013057600080fd5b506100d161013f366004610554565b6103ad565b34801561015057600080fd5b506100d161015f366004610515565b610405565b34801561017057600080fd5b506100a061017f366004610515565b6104ef565b6000806000836001600160a01b03166040516101aa90635c60da1b60e01b815260040190565b600060405180830381855afa9150503d80600081146101e5576040519150601f19603f3d011682016040523d82523d6000602084013e6101ea565b606091505b5091509150816101f957600080fd5b8080602001905181019061020d9190610538565b949350505050565b6000546001600160a01b031633146102485760405162461bcd60e51b815260040161023f906106c0565b60405180910390fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031633146102bc5760405162461bcd60e51b815260040161023f906106c0565b6040516308f2839760e41b81526001600160a01b038281166004830152831690638f283970906024015b600060405180830381600087803b15801561030057600080fd5b505af1158015610314573d6000803e3d6000fd5b505050505050565b6000546001600160a01b031633146103465760405162461bcd60e51b815260040161023f906106c0565b60405163278f794360e11b81526001600160a01b03841690634f1ef286903490610376908690869060040161065d565b6000604051808303818588803b15801561038f57600080fd5b505af11580156103a3573d6000803e3d6000fd5b5050505050505050565b6000546001600160a01b031633146103d75760405162461bcd60e51b815260040161023f906106c0565b604051631b2ce7f360e11b81526001600160a01b038281166004830152831690633659cfe6906024016102e6565b6000546001600160a01b0316331461042f5760405162461bcd60e51b815260040161023f906106c0565b6001600160a01b0381166104945760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b606482015260840161023f565b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b6000806000836001600160a01b03166040516101aa906303e1469160e61b815260040190565b600060208284031215610526578081fd5b81356105318161070b565b9392505050565b600060208284031215610549578081fd5b81516105318161070b565b60008060408385031215610566578081fd5b82356105718161070b565b915060208301356105818161070b565b809150509250929050565b6000806000606084860312156105a0578081fd5b83356105ab8161070b565b925060208401356105bb8161070b565b9150604084013567ffffffffffffffff808211156105d7578283fd5b818601915086601f8301126105ea578283fd5b8135818111156105fc576105fc6106f5565b604051601f8201601f19908116603f01168101908382118183101715610624576106246106f5565b8160405282815289602084870101111561063c578586fd5b82602086016020830137856020848301015280955050505050509250925092565b600060018060a01b038416825260206040818401528351806040850152825b818110156106985785810183015185820160600152820161067c565b818111156106a95783606083870101525b50601f01601f191692909201606001949350505050565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b634e487b7160e01b600052604160045260246000fd5b6001600160a01b038116811461072057600080fd5b5056fea2646970667358221220d849f96f3086b9f82cdcf665adb8c697ace05638da1c7c16ab2d26293717af6764736f6c63430008020033",
+      "r": "0x9a65a3d8098b6c389a0de26e111dc1d44a3e3557bf0620ba72c2296edba342d3",
+      "s": "0x611a056e253002c129eab75178f48387c5cbd72b8e4f2b2d8a75eee65fc5a995",
+      "v": 38,
+      "creates": "0xa6D2AbD2C175d172A2B32efd6c9e3E8fdB73Ec3c",
+      "chainId": 1
+    }
+  },
+  "proxies": [
+    {
+      "address": "0x306220604A87Bc090fF7Dd8656c6Bd446A1c083d",
+      "txHash": "0xdada6a9d13689f5d8709395dd23af3f66ab393d0efade8e39c5a68b005f886a1",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x09358f3fD1d9353eec48f151ebc77d33E76250C3",
+      "txHash": "0x159bcedba814d243830f0d012fc547d9be8f081a9209df753e83d294661e8c3b",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "bea9907a4925f8de78fdcaa9c98d11ab8af099edf83fec10c648be23e4ff2914": {
+      "address": "0xE86a294210D1216ec7045C64cC3908a14f065a75",
+      "txHash": "0xd05e4a1ff5fe1d0f785d30ab55bf6f7c26c033eae18e16552b5c5f9303150a4c",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "initialized",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "initializing",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+          },
+          {
+            "contract": "Initializable",
+            "label": "______gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+          },
+          {
+            "contract": "ContextUpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+          },
+          {
+            "contract": "OwnableUpgradeSafe",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:18"
+          },
+          {
+            "contract": "OwnableUpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:78"
+          },
+          {
+            "contract": "ERC165UpgradeSafe",
+            "label": "_supportedInterfaces",
+            "type": "t_mapping(t_bytes4,t_bool)",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/introspection/ERC165.sol:21"
+          },
+          {
+            "contract": "ERC165UpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/introspection/ERC165.sol:63"
+          },
+          {
+            "contract": "ERC721UpgradeSafe",
+            "label": "_holderTokens",
+            "type": "t_mapping(t_address,t_struct(UintSet)2483_storage)",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC721/ERC721.sol:32"
+          },
+          {
+            "contract": "ERC721UpgradeSafe",
+            "label": "_tokenOwners",
+            "type": "t_struct(UintToAddressMap)2026_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC721/ERC721.sol:35"
+          },
+          {
+            "contract": "ERC721UpgradeSafe",
+            "label": "_tokenApprovals",
+            "type": "t_mapping(t_uint256,t_address)",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC721/ERC721.sol:38"
+          },
+          {
+            "contract": "ERC721UpgradeSafe",
+            "label": "_operatorApprovals",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC721/ERC721.sol:41"
+          },
+          {
+            "contract": "ERC721UpgradeSafe",
+            "label": "_name",
+            "type": "t_string_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC721/ERC721.sol:44"
+          },
+          {
+            "contract": "ERC721UpgradeSafe",
+            "label": "_symbol",
+            "type": "t_string_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC721/ERC721.sol:47"
+          },
+          {
+            "contract": "ERC721UpgradeSafe",
+            "label": "_tokenURIs",
+            "type": "t_mapping(t_uint256,t_string_storage)",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC721/ERC721.sol:50"
+          },
+          {
+            "contract": "ERC721UpgradeSafe",
+            "label": "_baseURI",
+            "type": "t_string_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC721/ERC721.sol:53"
+          },
+          {
+            "contract": "ERC721UpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)41_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC721/ERC721.sol:555"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "timeStaked",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "contracts/NFTManager.sol:22"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "amountStaked",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "contracts/NFTManager.sol:23"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "blueprints",
+            "type": "t_mapping(t_string_memory,t_array(t_uint256)4_storage)",
+            "src": "contracts/NFTManager.sol:29"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "blueprintExists",
+            "type": "t_mapping(t_string_memory,t_bool)",
+            "src": "contracts/NFTManager.sol:30"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "myTokenURI",
+            "type": "t_mapping(t_uint256,t_string_storage)",
+            "src": "contracts/NFTManager.sol:32"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "myTokensCombinedCost",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "contracts/NFTManager.sol:33"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "myTokens",
+            "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+            "src": "contracts/NFTManager.sol:34"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "totalLockedTokens",
+            "type": "t_uint256",
+            "src": "contracts/NFTManager.sol:35"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "tokenURIs",
+            "type": "t_array(t_string_storage)dyn_storage",
+            "src": "contracts/NFTManager.sol:36"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "mintedTokenIds",
+            "type": "t_array(t_uint256)dyn_storage",
+            "src": "contracts/NFTManager.sol:37"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "lastId",
+            "type": "t_uint256",
+            "src": "contracts/NFTManager.sol:38"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "yeld",
+            "type": "t_address",
+            "src": "contracts/NFTManager.sol:39"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "oneDayInBlocks",
+            "type": "t_uint256",
+            "src": "contracts/NFTManager.sol:40"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "devTreasury",
+            "type": "t_address",
+            "src": "contracts/NFTManager.sol:41"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "treasuryPercentage",
+            "type": "t_uint256",
+            "src": "contracts/NFTManager.sol:42"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "distributionToOthersPercentage",
+            "type": "t_uint256",
+            "src": "contracts/NFTManager.sol:43"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "chi",
+            "type": "t_address",
+            "src": "contracts/NFTManager.sol:44"
+          },
+          {
+            "contract": "NFTManager",
+            "label": "distributeNFTRewards",
+            "type": "t_address",
+            "src": "contracts/NFTManager.sol:45"
+          }
+        ],
+        "types": {
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_string_memory,t_array(t_uint256)4_storage)": {
+            "label": "mapping(string => uint256[4])"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_uint256)4_storage": {
+            "label": "uint256[4]"
+          },
+          "t_mapping(t_string_memory,t_bool)": {
+            "label": "mapping(string => bool)"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_uint256,t_string_storage)": {
+            "label": "mapping(uint256 => string)"
+          },
+          "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+            "label": "mapping(address => uint256[])"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]"
+          },
+          "t_array(t_string_storage)dyn_storage": {
+            "label": "string[]"
+          },
+          "t_mapping(t_address,t_struct(UintSet)2483_storage)": {
+            "label": "mapping(address => struct EnumerableSet.UintSet)"
+          },
+          "t_struct(UintSet)2483_storage": {
+            "label": "struct EnumerableSet.UintSet",
+            "members": [
+              {
+                "label": "_inner",
+                "type": "t_struct(Set)2204_storage"
+              }
+            ]
+          },
+          "t_struct(Set)2204_storage": {
+            "label": "struct EnumerableSet.Set",
+            "members": [
+              {
+                "label": "_values",
+                "type": "t_array(t_bytes32)dyn_storage"
+              },
+              {
+                "label": "_indexes",
+                "type": "t_mapping(t_bytes32,t_uint256)"
+              }
+            ]
+          },
+          "t_array(t_bytes32)dyn_storage": {
+            "label": "bytes32[]"
+          },
+          "t_bytes32": {
+            "label": "bytes32"
+          },
+          "t_mapping(t_bytes32,t_uint256)": {
+            "label": "mapping(bytes32 => uint256)"
+          },
+          "t_struct(UintToAddressMap)2026_storage": {
+            "label": "struct EnumerableMap.UintToAddressMap",
+            "members": [
+              {
+                "label": "_inner",
+                "type": "t_struct(Map)1769_storage"
+              }
+            ]
+          },
+          "t_struct(Map)1769_storage": {
+            "label": "struct EnumerableMap.Map",
+            "members": [
+              {
+                "label": "_entries",
+                "type": "t_array(t_struct(MapEntry)1761_storage)dyn_storage"
+              },
+              {
+                "label": "_indexes",
+                "type": "t_mapping(t_bytes32,t_uint256)"
+              }
+            ]
+          },
+          "t_array(t_struct(MapEntry)1761_storage)dyn_storage": {
+            "label": "struct EnumerableMap.MapEntry[]"
+          },
+          "t_struct(MapEntry)1761_storage": {
+            "label": "struct EnumerableMap.MapEntry",
+            "members": [
+              {
+                "label": "_key",
+                "type": "t_bytes32"
+              },
+              {
+                "label": "_value",
+                "type": "t_bytes32"
+              }
+            ]
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+            "label": "mapping(address => mapping(address => bool))"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_array(t_uint256)41_storage": {
+            "label": "uint256[41]"
+          },
+          "t_mapping(t_bytes4,t_bool)": {
+            "label": "mapping(bytes4 => bool)"
+          },
+          "t_bytes4": {
+            "label": "bytes4"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          }
+        }
+      }
+    },
+    "67a313cca1c6dd01847bba2b9dc919626360dbc2af4d36b34b592fad2ca6cb91": {
+      "address": "0x68D983ceC1BE52807d39F5C093dc091E264C38a8",
+      "txHash": "0xe88f21a5807dd6a51ea2b5386ad1595098a64535a53b408b02ec654c8041e3e2",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "initialized",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "initializing",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+          },
+          {
+            "contract": "Initializable",
+            "label": "______gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+          },
+          {
+            "contract": "ContextUpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+          },
+          {
+            "contract": "OwnableUpgradeSafe",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:18"
+          },
+          {
+            "contract": "OwnableUpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:78"
+          },
+          {
+            "contract": "DistributeNFTRewards",
+            "label": "amountLocked",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "contracts/DistributeNFTRewards.sol:16"
+          },
+          {
+            "contract": "DistributeNFTRewards",
+            "label": "lastPriceEarningsExtracted",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "contracts/DistributeNFTRewards.sol:18"
+          },
+          {
+            "contract": "DistributeNFTRewards",
+            "label": "lockingTime",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "contracts/DistributeNFTRewards.sol:20"
+          },
+          {
+            "contract": "DistributeNFTRewards",
+            "label": "liquidityProviderToken",
+            "type": "t_address",
+            "src": "contracts/DistributeNFTRewards.sol:22"
+          },
+          {
+            "contract": "DistributeNFTRewards",
+            "label": "rewardToken",
+            "type": "t_address",
+            "src": "contracts/DistributeNFTRewards.sol:24"
+          },
+          {
+            "contract": "DistributeNFTRewards",
+            "label": "totalLiquidityLocked",
+            "type": "t_uint256",
+            "src": "contracts/DistributeNFTRewards.sol:26"
+          },
+          {
+            "contract": "DistributeNFTRewards",
+            "label": "totalTOKENFeeMined",
+            "type": "t_uint256",
+            "src": "contracts/DistributeNFTRewards.sol:28"
+          },
+          {
+            "contract": "DistributeNFTRewards",
+            "label": "tokenFeePrice",
+            "type": "t_uint256",
+            "src": "contracts/DistributeNFTRewards.sol:29"
+          },
+          {
+            "contract": "DistributeNFTRewards",
+            "label": "accomulatedRewards",
+            "type": "t_uint256",
+            "src": "contracts/DistributeNFTRewards.sol:30"
+          },
+          {
+            "contract": "DistributeNFTRewards",
+            "label": "pricePadding",
+            "type": "t_uint256",
+            "src": "contracts/DistributeNFTRewards.sol:31"
+          },
+          {
+            "contract": "DistributeNFTRewards",
+            "label": "manager",
+            "type": "t_address",
+            "src": "contracts/DistributeNFTRewards.sol:32"
+          }
+        ],
+        "types": {
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    }
+  }
+}

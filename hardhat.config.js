@@ -42,7 +42,7 @@ module.exports = {
 			url: 'https://mainnet.infura.io/v3/87ac5f84d691494588f2162b15d1523d',
 			chainId: 1,
 			accounts: { mnemonic },
-			gasPrice: 75000000000,
+			gasPrice: 40000000000,
 		},
 	},
 	etherscan: {
