@@ -1,6 +1,8 @@
 require('@nomiclabs/hardhat-waffle')
 require('@openzeppelin/hardhat-upgrades')
 require('@nomiclabs/hardhat-etherscan')
+require("@nomiclabs/hardhat-ethers");
+
 const fs = require('fs')
 const mnemonic = fs.readFileSync('.secret').toString().trim()
 
