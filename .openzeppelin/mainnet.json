@@ -1232,6 +1232,136 @@
           }
         }
       }
+    },
+    "0b2470f5bce40fad5feb64585045fb53dbdd6d3a935a19847aea390cdef0e87c": {
+      "address": "0x334F7Fd3F70f0e6795d490904987EAE3198bd155",
+      "txHash": "0x0ab91160f598986276258d4b69fc3614392b583f629d834dda432d2cc3778f43",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "initialized",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "initializing",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+          },
+          {
+            "contract": "Initializable",
+            "label": "______gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+          },
+          {
+            "contract": "ContextUpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+          },
+          {
+            "contract": "OwnableUpgradeSafe",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:18"
+          },
+          {
+            "contract": "OwnableUpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:78"
+          },
+          {
+            "contract": "DistributeNFTRewardsV2",
+            "label": "amountLocked",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "contracts/DistributeNFTRewardsV2.sol:16"
+          },
+          {
+            "contract": "DistributeNFTRewardsV2",
+            "label": "lastPriceEarningsExtracted",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "contracts/DistributeNFTRewardsV2.sol:18"
+          },
+          {
+            "contract": "DistributeNFTRewardsV2",
+            "label": "lockingTime",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "contracts/DistributeNFTRewardsV2.sol:20"
+          },
+          {
+            "contract": "DistributeNFTRewardsV2",
+            "label": "liquidityProviderToken",
+            "type": "t_address",
+            "src": "contracts/DistributeNFTRewardsV2.sol:22"
+          },
+          {
+            "contract": "DistributeNFTRewardsV2",
+            "label": "rewardToken",
+            "type": "t_address",
+            "src": "contracts/DistributeNFTRewardsV2.sol:24"
+          },
+          {
+            "contract": "DistributeNFTRewardsV2",
+            "label": "totalLiquidityLocked",
+            "type": "t_uint256",
+            "src": "contracts/DistributeNFTRewardsV2.sol:26"
+          },
+          {
+            "contract": "DistributeNFTRewardsV2",
+            "label": "totalTOKENFeeMined",
+            "type": "t_uint256",
+            "src": "contracts/DistributeNFTRewardsV2.sol:28"
+          },
+          {
+            "contract": "DistributeNFTRewardsV2",
+            "label": "tokenFeePrice",
+            "type": "t_uint256",
+            "src": "contracts/DistributeNFTRewardsV2.sol:29"
+          },
+          {
+            "contract": "DistributeNFTRewardsV2",
+            "label": "accomulatedRewards",
+            "type": "t_uint256",
+            "src": "contracts/DistributeNFTRewardsV2.sol:30"
+          },
+          {
+            "contract": "DistributeNFTRewardsV2",
+            "label": "pricePadding",
+            "type": "t_uint256",
+            "src": "contracts/DistributeNFTRewardsV2.sol:31"
+          },
+          {
+            "contract": "DistributeNFTRewardsV2",
+            "label": "manager",
+            "type": "t_address",
+            "src": "contracts/DistributeNFTRewardsV2.sol:32"
+          }
+        ],
+        "types": {
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
     }
   }
 }
